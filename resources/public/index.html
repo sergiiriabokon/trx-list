@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>trx-list</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.4/chartist.min.css"/>
+    <style type="text/css">
+    * {font-family: Roboto, Arial, Helvetica, sans-serif;}
+    input[type="text"] {
+      margin: 5px;
+      padding: 3px;
+    }
+    button {
+      margin: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      background: #2878c3;
+      border: 0;
+      color: white;
+      border-radius: 8px;
+
+    }
+    .ct-chart {
+      height: 210px;
+      overflow:hidden;
+    }
+    table, div.new-trx {
+  margin-top: 20px;
+  border-collapse: collapse;
+  width: 100%;
+  width: 800px;
+  left:calc(50% - 400px); right:0;
+  position:relative;
+}
+
+table td, th {
+  border: 1px solid #ddd;
+  padding: 12px;
+}
+
+table tr:nth-child(even){background-color: #f2f2f2;}
+
+table tr:hover {background-color: #ddd;}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #2878c3;
+  color: white;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+h1 {
+  text-transform: uppercase;
+  color:#555;
+  text-align: center;
+  font-weight: normal;
+}
+h2 {
+  margin: 2px 0;
+  text-align: left;
+  padding: 0 5px;
+  color:#555;
+  font-weight: normal;
+}
+body {
+}
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.4/chartist.min.js" integrity="sha512-9rxMbTkN9JcgG5euudGbdIbhFZ7KGyAuVomdQDI9qXfPply9BJh0iqA7E/moLCatH2JD4xBGHwV6ezBkCpnjRQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+  </head>
+  <body>
+    <noscript>
+      trx-list is a JavaScript app. Please enable JavaScript to continue.
+    </noscript>
+
+    <div id="ct-chart" class="ct-chart"></div>
+    <script type="text/javascript">
+      var gaugechart = new Chartist.Pie('.ct-chart', {
+    series: []
+  }, {
+    donut: true,
+    donutWidth: 45,
+    donutSolid: false,
+    startAngle: 270,
+    total: 200,
+    showLabel: false,
+    height: 400
+  });
+    
+        </script>
+
+    <div id="app"></div>
+
+
+    <script src="/js/compiled/app.js"></script>
+
+
+  </body>
+</html>
